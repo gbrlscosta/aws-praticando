@@ -38,20 +38,7 @@ jobs:
       with:
         service-id: srv-crddqnrtq21c73d2d5ag
         api-key: rnd_IcbrR2EIFa6apZawYZdu2bdNApCv
-
-    - name: EC2 salaH
-      run: |
-            echo "${{secrets.AWS_EC2_SALAH}}" >private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-44-201-89-1.compute-1.amazonaws.com "
-            cd python_flask/;git pull;./iniciarApp.sh;"
-
-            
-
-
-
-
-
-          
+        
     - name: Deploy no EC2 -AWS
       run: |
             echo "Conectando no EC2"
